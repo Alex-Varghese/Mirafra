@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-`include "ALU_design.v"
+`include "alu.v"
 
 module ALU_test;
 
