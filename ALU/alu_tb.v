@@ -82,26 +82,6 @@ module alu_tb();
 	        err = current_test_case[1];
 	        reserved_bit = current_test_case[0];
 		expected_output = {result_expected,cout,gle_expected,oflow,err};
-	        if( MODE ) begin
-				$display("\n---------------------------------------------------------- Expected result from stimulus start ------------------------------------------------------------\n");
-				$display("\nAt Time : %t | Arithmetic Operation : ",$time);
-				$display("\n MODE | INP_VALID |    OPA    |    OPB     | CMD | STIMULUS RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");
-				$display("  %b   |     %2b    | %b  |  %b  | %d  |  %b    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,result_expected,cout,gle_expected,oflow,err,reserved_bit);
-				$display("\n---------------------------------------------------------- Expected result from stimulus end ------------------------------------------------------------\n");
-			end
-			else if (MODE == 0 && CE) begin
-				$display("\nAt Time : %t | Logical Operation : ",$time);
-                		$display("\n MODE | INP_VALID |    OPA    |    OPB     | CMD |  STIMULUS RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");			
-				$display("  %b   |     %2b    | %b  |  %b  | %d  |  %b    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,result_expected,cout,gle_expected,oflow,err,reserved_bit);
-				$display("\n---------------------------------------------------------- Expected result from stimulus end ------------------------------------------------------------\n");
-			end
-			else begin
-				$display("\nAt Time : %t | Initial test : ",$time);
-                		$display("\n MODE | INP_VALID |    OPA    |    OPB     | CMD |  STIMULUS RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");			
-				$display("  %b   |     %2b    | %b  |  %b  | %d  |  %b    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,result_expected,cout,gle_expected,oflow,err,reserved_bit);
-				$display("\n---------------------------------------------------------- Expected result from stimulus end ------------------------------------------------------------\n");
-			end
-		end
 	endtask
 	
 	task monitor ();
@@ -115,34 +95,37 @@ module alu_tb();
 			response_packet[79:64]	= RES;
 	        	response_packet[57]	= current_test_case[0]; // Reserved Bit
 	        	dut_output = {RES,COUT,{G,L,E},OFLOW,ERR};
-			if(expected_output === dut_output) begin
-			if(MODE) begin
-				$display("\n-------------------------------------------------- DUT OUTPUT START---------------------------------------------------------------");
-				$display(" \nMODE | INP_VALID | OPA  |  OPB  | CMD | DUT RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");
-				$display("  %b   |     %2b    | %d  |  %d  | %d  |  %d    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,RES,COUT,{G,L,E},OFLOW,ERR,reserved_bit);
-				$display("\n-------------------------------------------------- DUT OUTPUT DONE---------------------------------------------------------------");
+		    	if( expexted_output != dut_output ) begin
+				$display("\n---------------------------------------------------------- Status Failed ---------------------------------------------------------------------\n");
+				$display(\n\n........................................................................ Start of ID : %d ................................................................\n",ID);
+			if( MODE ) begin
+				$display("\nAt Time : %t | Arithmetic Operation : ",$time);
+				$display("\n MODE | INP_VALID |    OPA    |    OPB     | CMD | STIMULUS RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");
+				$display("  %b   |     %2b    | %d  |  %d  | %d  |  %d    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,result_expected,cout,gle_expected,oflow,err,reserved_bit);
+			end
+			else if (MODE == 0 && CE) begin
+				$display("\nAt Time : %t | Logical Operation : ",$time);
+                		$display("\n MODE | INP_VALID |    OPA    |    OPB     | CMD |  STIMULUS RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");			
+				$display("  %b   |     %2b    | %b  |  %b  | %d  |  %b    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,result_expected,cout,gle_expected,oflow,err,reserved_bit);
 			end
 			else begin
-				$display("-------------------------------------------------- DUT OUTPUT ---------------------------------------------------------------");
-				$display(" \nMODE | INP_VALID |    OPA    |    OPB     | CMD |       DUT RESULT      | COUT | GLE | OFLOW | ERR | Reserved_bit");
-                		$display("  %b   |     %2b    | %b  |  %b  | %d  |  %b    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,RES,COUT,{G,L,E},OFLOW,ERR,reserved_bit);
-             	    	        $display("\n-------------------------------------------------- DUT OUTPUT DONE---------------------------------------------------------------");
-			end	
+				$display("\nAt Time : %t | Initial test : ",$time);
+                		$display("\n MODE | INP_VALID |    OPA    |    OPB     | CMD |  STIMULUS RESULT | COUT | GLE | OFLOW | ERR | Reserved_bit");			
+				$display("  %b   |     %2b    | %b  |  %b  | %b  |  %b    |   %b  | %3b |   %b   |  %b  |     %b\n",MODE,INP_VALID,OPA,OPB,CMD,result_expected,cout,gle_expected,oflow,err,reserved_bit);
+			end
 		end
-	end
+$display(\n\n........................................................................ End of ID : %d ................................................................\n",ID);
+end
+	     end
 	endtask
 	
 	task score_board();
 		   begin
-	        #5;
-			// $display("\n---------------- Expected Result --------------||------------------ DUT Output-------------------||------Result------");
 	     	 if(expected_output === dut_output) begin
-			//	 $display("\t\t %15b \t\t ||\t\t %15b\t\t  || \t   PASS",expected_output, dut_output);
-	    	     scoreboard_stimulus_mem[scb_mem_ptr] = {ID, expected_output, dut_output, `PASS};
+			scoreboard_stimulus_mem[scb_mem_ptr] = {ID, expected_output, dut_output, `PASS};
     		 end
 	  	 else begin
-	    	     scoreboard_stimulus_mem[scb_mem_ptr] = {ID, expected_output, dut_output, `FAIL};
-				  // $display("\t\t %15b \t\t ||\t\t %15b  \t\t ||  \t  FAIL",expected_output, dut_output);
+	    	         scoreboard_stimulus_mem[scb_mem_ptr] = {ID, expected_output, dut_output, `FAIL};
 		 end
 		 scb_mem_ptr = scb_mem_ptr + 1;
 	end
@@ -175,7 +158,6 @@ module alu_tb();
 		begin
 			current_test_case = stimulus_data[stimulus_mem_ptr];
 			temp = current_test_case[56:49];
-			$display("\n--------------------------------------------------------- ID : %d -----------------------------------------------------------",temp);
 			stimulus_mem_ptr = stimulus_mem_ptr + 1;
 		end
 		
@@ -193,9 +175,9 @@ module alu_tb();
 			end
 			else
 				driver();
-                       		monitor();
                     	join
 			score_board();
+			monitor();
             	end
             	gen_report();
             	$fclose(fid);
