@@ -1,0 +1,11 @@
+var g_data = {
+c279:[4,'reset',[],,'278',2,1,'\\/top/alu_cover/cg ','211','/top/alu_cover',[[],[0,'1','4737',,'auto[0]'],[0,'1','0',1,'auto[1]']],[]],
+c280:[4,'clock_enable_bin',[],,'278',2,1,'\\/top/alu_cover/cg ','211','/top/alu_cover',[[],[0,'1','0',1,'auto[0]'],[0,'1','4734',,'auto[1]']],[]],
+c281:[4,'MODE',[],,'278',2,1,'\\/top/alu_cover/cg ','211','/top/alu_cover',[[],[0,'1','1650',,'auto[0]'],[0,'1','3084',,'auto[1]']],[]],
+c282:[4,'CIN',[],,'278',2,1,'\\/top/alu_cover/cg ','211','/top/alu_cover',[[],[0,'1','0',1,'auto[0]'],[0,'1','0',1,'auto[1]']],[]],
+c283:[4,'inpvalid',[],,'278',2,1,'\\/top/alu_cover/cg ','211','/top/alu_cover',[[],[0,'1','789',,'invalid'],[0,'1','2388',,'input_valid_1'],[0,'1','753',,'input_valid_2'],[0,'1','804',,'input_valid_3']],[]],
+c284:[4,'commands',[],,'278',2,1,'\\/top/alu_cover/cg ','211','/top/alu_cover',[[],[0,'1','0',1,'arithmetic_bin[0]'],[0,'1','0',1,'arithmetic_bin[1]'],[0,'1','0',1,'arithmetic_bin[2]'],[0,'1','0',1,'arithmetic_bin[3]'],[0,'1','0',1,'arithmetic_bin[4]'],[0,'1','0',1,'arithmetic_bin[5]'],[0,'1','0',1,'arithmetic_bin[6]'],[0,'1','0',1,'arithmetic_bin[7]'],[0,'1','0',1,'logical[0]'],[0,'1','0',1,'logical[1]']
+,[0,'1','0',1,'logical[2]'],[0,'1','0',1,'logical[3]'],[0,'1','0',1,'logical[4]'],[0,'1','0',1,'logical[5]'],[0,'1','0',1,'logical[6]'],[0,'1','0',1,'logical[7]']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);
