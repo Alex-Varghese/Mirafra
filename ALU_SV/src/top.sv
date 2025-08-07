@@ -44,7 +44,7 @@ module top;
 	
 	cover_age alu_cover(clk,rst,intf.CE,intf.MODE,intf.CMD,intf.INP_VALID,intf.OPA,intf.OPB,intf.CIN,intf.RES);
 
-	test tb;
+	regression tb;
 
 	initial begin
 		tb = new(intf.DRV, intf.MON, intf.REF);
