@@ -2,7 +2,7 @@
 
 class monitor extends uvm_monitor;
 
-  virtual alu_interface vif;
+  virtual alu_intf vif;
   sequence_item seq;
   
   uvm_analysis_port #(sequence_item) item_collected_port;
