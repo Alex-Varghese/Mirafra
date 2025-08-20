@@ -1,0 +1,799 @@
+# vsim -c top -do "run -all; quit" 
+# Start time: 14:23:59 on Aug 20,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: top.sv(18): (vopt-2241) Connection width does not match width of port 'CMD'. The port definition is at: alu.v(1).
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.alu_intf(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.alu_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-8441) driver.sv(25): Clocking block output vif.driver_cb.RST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(26): Clocking block output vif.driver_cb.OPA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(27): Clocking block output vif.driver_cb.OPB is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(28): Clocking block output vif.driver_cb.MODE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(29): Clocking block output vif.driver_cb.CMD is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(30): Clocking block output vif.driver_cb.CIN is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(31): Clocking block output vif.driver_cb.CE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(32): Clocking block output vif.driver_cb.INP_VALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(25): Clocking block output vif.driver_cb.RST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(31): Clocking block output vif.driver_cb.CE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(30): Clocking block output vif.driver_cb.CIN is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(32): Clocking block output vif.driver_cb.INP_VALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(29): Clocking block output vif.driver_cb.CMD is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(26): Clocking block output vif.driver_cb.OPA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(27): Clocking block output vif.driver_cb.OPB is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(25): Clocking block output vif.driver_cb.RST is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(31): Clocking block output vif.driver_cb.CE is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(30): Clocking block output vif.driver_cb.CIN is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(32): Clocking block output vif.driver_cb.INP_VALID is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(29): Clocking block output vif.driver_cb.CMD is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(26): Clocking block output vif.driver_cb.OPA is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# ** Warning: (vsim-8441) driver.sv(27): Clocking block output vif.driver_cb.OPB is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /alu_pkg::driver File: alu_pkg.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO monitor.sv(54) @ 45: uvm_test_top.env.agnt.mon [mon] @ : 45 Logical : 
+# UVM_INFO monitor.sv(55) @ 45: uvm_test_top.env.agnt.mon [mon] RST = 1 | CE = 1 |  CIN = 1 | INPVALID = 01 | CMD = 11 | OPA = 11101001 | OPB = 11110100 | RES =   z | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 75: uvm_test_top.env.agnt.drv [drv] @ : 75 Logical : 
+# UVM_INFO driver.sv(48) @ 75: uvm_test_top.env.agnt.drv [drv] RST = 1 | CE = 1 |  CIN = 1 | INPVALID = 01 | CMD = 11 | OPA = 233 | OPB = 244
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		1		|		1
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		11		|		11
+# inp_valid	|		01		|		01
+# opa		|		233		|		233
+# opb		|		244		|		244 
+# cin		|		1		|		1
+# res		|		z		|		z
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           1 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 125: uvm_test_top.env.agnt.mon [mon] @ : 125 Logical : 
+# UVM_INFO monitor.sv(55) @ 125: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 00 | CMD =  1 | OPA = 00001010 | OPB = 10101010 | RES =   z | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 155: uvm_test_top.env.agnt.drv [drv] @ : 155 Logical : 
+# UVM_INFO driver.sv(48) @ 155: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 00 | CMD =  1 | OPA =  10 | OPB = 170
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		1		|		1
+# inp_valid	|		00		|		00
+# opa		|		10		|		10
+# opb		|		170		|		170 
+# cin		|		1		|		1
+# res		|		z		|		z
+# err		|		z		|		1
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           1 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 205: uvm_test_top.env.agnt.mon [mon] @ : 205 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 205: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 01 | CMD = 10 | OPA = 179 | OPB =  89 | RES =   z | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 225: uvm_test_top.env.agnt.drv [drv] @ : 225 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 225: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 01 | CMD = 10 | OPA = 179 | OPB =  89
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		10		|		10
+# inp_valid	|		01		|		01
+# opa		|		179		|		179
+# opb		|		89		|		89 
+# cin		|		0		|		0
+# res		|		z		|		z
+# err		|		z		|		1
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           2 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 275: uvm_test_top.env.agnt.mon [mon] @ : 275 Logical : 
+# UVM_INFO monitor.sv(55) @ 275: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 10 | CMD =  6 | OPA = 11000000 | OPB = 11000111 | RES =  76 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 305: uvm_test_top.env.agnt.drv [drv] @ : 305 Logical : 
+# UVM_INFO driver.sv(48) @ 305: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 10 | CMD =  6 | OPA = 192 | OPB = 199
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		6		|		6
+# inp_valid	|		10		|		10
+# opa		|		192		|		192
+# opb		|		199		|		199 
+# cin		|		1		|		1
+# res		|		76		|		z
+# err		|		z		|		1
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           3 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 355: uvm_test_top.env.agnt.mon [mon] @ : 355 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 355: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  4 | OPA =  50 | OPB =  79 | RES =  50 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 385: uvm_test_top.env.agnt.drv [drv] @ : 385 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 385: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  4 | OPA =  50 | OPB =  79
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		4		|		4
+# inp_valid	|		11		|		11
+# opa		|		50		|		50
+# opb		|		79		|		79 
+# cin		|		1		|		1
+# res		|		50		|		51
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           4 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 435: uvm_test_top.env.agnt.mon [mon] @ : 435 Logical : 
+# UVM_INFO monitor.sv(55) @ 435: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  0 | OPA = 00001101 | OPB = 00100100 | RES =   4 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 465: uvm_test_top.env.agnt.drv [drv] @ : 465 Logical : 
+# UVM_INFO driver.sv(48) @ 465: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  0 | OPA =  13 | OPB =  36
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		0		|		0
+# inp_valid	|		11		|		11
+# opa		|		13		|		13
+# opb		|		36		|		36 
+# cin		|		1		|		1
+# res		|		4		|		4
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           2 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 515: uvm_test_top.env.agnt.mon [mon] @ : 515 Logical : 
+# UVM_INFO monitor.sv(55) @ 515: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  1 | OPA = 01001011 | OPB = 10011100 | RES = 247 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 545: uvm_test_top.env.agnt.drv [drv] @ : 545 Logical : 
+# UVM_INFO driver.sv(48) @ 545: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  1 | OPA =  75 | OPB = 156
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		1		|		1
+# inp_valid	|		11		|		11
+# opa		|		75		|		75
+# opb		|		156		|		156 
+# cin		|		0		|		0
+# res		|		247		|		247
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           3 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 595: uvm_test_top.env.agnt.mon [mon] @ : 595 Logical : 
+# UVM_INFO monitor.sv(55) @ 595: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  2 | OPA = 11101111 | OPB = 01101000 | RES =   1 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 625: uvm_test_top.env.agnt.drv [drv] @ : 625 Logical : 
+# UVM_INFO driver.sv(48) @ 625: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  2 | OPA = 239 | OPB = 104
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		2		|		2
+# inp_valid	|		11		|		11
+# opa		|		239		|		239
+# opb		|		104		|		104 
+# cin		|		1		|		1
+# res		|		1		|		239
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           5 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 675: uvm_test_top.env.agnt.mon [mon] @ : 675 Logical : 
+# UVM_INFO monitor.sv(55) @ 675: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  3 | OPA = 11000001 | OPB = 00100000 | RES =  30 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 705: uvm_test_top.env.agnt.drv [drv] @ : 705 Logical : 
+# UVM_INFO driver.sv(48) @ 705: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  3 | OPA = 193 | OPB =  32
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		3		|		3
+# inp_valid	|		11		|		11
+# opa		|		193		|		193
+# opb		|		32		|		32 
+# cin		|		0		|		0
+# res		|		30		|		30
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           4 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 755: uvm_test_top.env.agnt.mon [mon] @ : 755 Logical : 
+# UVM_INFO monitor.sv(55) @ 755: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  4 | OPA = 11111111 | OPB = 01011101 | RES = 162 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 785: uvm_test_top.env.agnt.drv [drv] @ : 785 Logical : 
+# UVM_INFO driver.sv(48) @ 785: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  4 | OPA = 255 | OPB =  93
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		4		|		4
+# inp_valid	|		11		|		11
+# opa		|		255		|		255
+# opb		|		93		|		93 
+# cin		|		0		|		0
+# res		|		162		|		162
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           5 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 835: uvm_test_top.env.agnt.mon [mon] @ : 835 Logical : 
+# UVM_INFO monitor.sv(55) @ 835: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  5 | OPA = 10110001 | OPB = 11010101 | RES = 155 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 865: uvm_test_top.env.agnt.drv [drv] @ : 865 Logical : 
+# UVM_INFO driver.sv(48) @ 865: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  5 | OPA = 177 | OPB = 213
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		5		|		5
+# inp_valid	|		11		|		11
+# opa		|		177		|		177
+# opb		|		213		|		213 
+# cin		|		1		|		1
+# res		|		155		|		155
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           6 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 915: uvm_test_top.env.agnt.mon [mon] @ : 915 Logical : 
+# UVM_INFO monitor.sv(55) @ 915: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  6 | OPA = 11011111 | OPB = 01100110 | RES =  32 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 945: uvm_test_top.env.agnt.drv [drv] @ : 945 Logical : 
+# UVM_INFO driver.sv(48) @ 945: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  6 | OPA = 223 | OPB = 102
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		6		|		6
+# inp_valid	|		11		|		11
+# opa		|		223		|		223
+# opb		|		102		|		102 
+# cin		|		1		|		1
+# res		|		32		|		32
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           7 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 995: uvm_test_top.env.agnt.mon [mon] @ : 995 Logical : 
+# UVM_INFO monitor.sv(55) @ 995: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  7 | OPA = 10010110 | OPB = 10000101 | RES = 122 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1025: uvm_test_top.env.agnt.drv [drv] @ : 1025 Logical : 
+# UVM_INFO driver.sv(48) @ 1025: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  7 | OPA = 150 | OPB = 133
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		7		|		7
+# inp_valid	|		11		|		11
+# opa		|		150		|		150
+# opb		|		133		|		133 
+# cin		|		1		|		1
+# res		|		122		|		122
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           8 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 1075: uvm_test_top.env.agnt.mon [mon] @ : 1075 Logical : 
+# UVM_INFO monitor.sv(55) @ 1075: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  8 | OPA = 01011111 | OPB = 01101111 | RES =  95 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1105: uvm_test_top.env.agnt.drv [drv] @ : 1105 Logical : 
+# UVM_INFO driver.sv(48) @ 1105: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  8 | OPA =  95 | OPB = 111
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		8		|		8
+# inp_valid	|		11		|		11
+# opa		|		95		|		95
+# opb		|		111		|		111 
+# cin		|		0		|		0
+# res		|		95		|		47
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           6 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 1155: uvm_test_top.env.agnt.mon [mon] @ : 1155 Logical : 
+# UVM_INFO monitor.sv(55) @ 1155: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  9 | OPA = 11100001 | OPB = 10011011 | RES = 194 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1185: uvm_test_top.env.agnt.drv [drv] @ : 1185 Logical : 
+# UVM_INFO driver.sv(48) @ 1185: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  9 | OPA = 225 | OPB = 155
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		9		|		9
+# inp_valid	|		11		|		11
+# opa		|		225		|		225
+# opb		|		155		|		155 
+# cin		|		0		|		0
+# res		|		194		|		450
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           7 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 1235: uvm_test_top.env.agnt.mon [mon] @ : 1235 Logical : 
+# UVM_INFO monitor.sv(55) @ 1235: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD = 11 | OPA = 01111100 | OPB = 00011111 | RES =  62 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1265: uvm_test_top.env.agnt.drv [drv] @ : 1265 Logical : 
+# UVM_INFO driver.sv(48) @ 1265: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD = 11 | OPA = 124 | OPB =  31
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		11		|		11
+# inp_valid	|		11		|		11
+# opa		|		124		|		124
+# opb		|		31		|		31 
+# cin		|		0		|		0
+# res		|		62		|		62
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =           9 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 1315: uvm_test_top.env.agnt.mon [mon] @ : 1315 Logical : 
+# UVM_INFO monitor.sv(55) @ 1315: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 10 | OPA = 11100011 | OPB = 10010111 | RES =  46 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1345: uvm_test_top.env.agnt.drv [drv] @ : 1345 Logical : 
+# UVM_INFO driver.sv(48) @ 1345: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 10 | OPA = 227 | OPB = 151
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		10		|		10
+# inp_valid	|		11		|		11
+# opa		|		227		|		227
+# opb		|		151		|		151 
+# cin		|		1		|		1
+# res		|		46		|		75
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           8 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 1395: uvm_test_top.env.agnt.mon [mon] @ : 1395 Logical : 
+# UVM_INFO monitor.sv(55) @ 1395: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 13 | OPA = 00010101 | OPB = 00111001 | RES = 138 | ERR = 0 | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1425: uvm_test_top.env.agnt.drv [drv] @ : 1425 Logical : 
+# UVM_INFO driver.sv(48) @ 1425: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 13 | OPA =  21 | OPB =  57
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		13		|		13
+# inp_valid	|		11		|		11
+# opa		|		21		|		21
+# opb		|		57		|		57 
+# cin		|		1		|		1
+# res		|		138		|		138
+# err		|		0		|		1
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =           9 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 1475: uvm_test_top.env.agnt.mon [mon] @ : 1475 Logical : 
+# UVM_INFO monitor.sv(55) @ 1475: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 12 | OPA = 00110011 | OPB = 10001001 | RES = 102 | ERR = 1 | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 1505: uvm_test_top.env.agnt.drv [drv] @ : 1505 Logical : 
+# UVM_INFO driver.sv(48) @ 1505: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 12 | OPA =  51 | OPB = 137
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		0		|		0
+# cmd		|		12		|		12
+# inp_valid	|		11		|		11
+# opa		|		51		|		51
+# opb		|		137		|		137 
+# cin		|		1		|		1
+# res		|		102		|		102
+# err		|		1		|		1
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          10 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 1555: uvm_test_top.env.agnt.mon [mon] @ : 1555 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 1555: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  0 | OPA = 228 | OPB = 171 | RES = 399 | ERR = z | OFLOW = z | COUT = 1 | GLE = zzz
+# UVM_INFO driver.sv(43) @ 1585: uvm_test_top.env.agnt.drv [drv] @ : 1585 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 1585: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  0 | OPA = 228 | OPB = 171
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		0		|		0
+# inp_valid	|		11		|		11
+# opa		|		228		|		228
+# opb		|		171		|		171 
+# cin		|		1		|		1
+# res		|		399		|		399
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		1		|		1
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          11 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 1635: uvm_test_top.env.agnt.mon [mon] @ : 1635 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 1635: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  2 | OPA =  31 | OPB = 226 | RES = 258 | ERR = z | OFLOW = z | COUT = 1 | GLE = zzz
+# UVM_INFO driver.sv(43) @ 1665: uvm_test_top.env.agnt.drv [drv] @ : 1665 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 1665: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  2 | OPA =  31 | OPB = 226
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		2		|		2
+# inp_valid	|		11		|		11
+# opa		|		31		|		31
+# opb		|		226		|		226 
+# cin		|		1		|		1
+# res		|		258		|		258
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		1		|		1
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          12 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 1715: uvm_test_top.env.agnt.mon [mon] @ : 1715 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 1715: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  3 | OPA =  86 | OPB =  61 | RES =  25 | ERR = z | OFLOW = 0 | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 1745: uvm_test_top.env.agnt.drv [drv] @ : 1745 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 1745: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  3 | OPA =  86 | OPB =  61
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		3		|		3
+# inp_valid	|		11		|		11
+# opa		|		86		|		86
+# opb		|		61		|		61 
+# cin		|		0		|		0
+# res		|		25		|		25
+# err		|		z		|		z
+# oflow		|		0		|		0
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          13 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 1805: uvm_test_top.env.agnt.mon [mon] @ : 1805 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 1805: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  9 | OPA = 175 | OPB = 159 | RES =   0 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 1815: uvm_test_top.env.agnt.drv [drv] @ : 1815 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 1815: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  9 | OPA = 175 | OPB = 159
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		9		|		9
+# inp_valid	|		11		|		11
+# opa		|		175		|		175
+# opb		|		159		|		159 
+# cin		|		0		|		0
+# res		|		0		|		0
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          14 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 1875: uvm_test_top.env.agnt.mon [mon] @ : 1875 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 1875: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 10 | OPA = 212 | OPB = 195 | RES = 485 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 1885: uvm_test_top.env.agnt.drv [drv] @ : 1885 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 1885: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD = 10 | OPA = 212 | OPB = 195
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		10		|		10
+# inp_valid	|		11		|		11
+# opa		|		212		|		212
+# opb		|		195		|		195 
+# cin		|		1		|		1
+# res		|		485		|		248
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =          10 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 1945: uvm_test_top.env.agnt.mon [mon] @ : 1945 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 1945: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  4 | OPA =  43 | OPB = 118 | RES =  43 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 1965: uvm_test_top.env.agnt.drv [drv] @ : 1965 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 1965: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  4 | OPA =  43 | OPB = 118
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		4		|		4
+# inp_valid	|		11		|		11
+# opa		|		43		|		43
+# opb		|		118		|		118 
+# cin		|		1		|		1
+# res		|		43		|		44
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =          11 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 2025: uvm_test_top.env.agnt.mon [mon] @ : 2025 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 2025: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  6 | OPA = 183 | OPB = 234 | RES = 233 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 2045: uvm_test_top.env.agnt.drv [drv] @ : 2045 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 2045: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  6 | OPA = 183 | OPB = 234
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		6		|		6
+# inp_valid	|		11		|		11
+# opa		|		183		|		183
+# opb		|		234		|		234 
+# cin		|		0		|		0
+# res		|		233		|		235
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =          12 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 2105: uvm_test_top.env.agnt.mon [mon] @ : 2105 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 2105: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  5 | OPA = 229 | OPB =   2 | RES = 228 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 2125: uvm_test_top.env.agnt.drv [drv] @ : 2125 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 2125: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 1 | INPVALID = 11 | CMD =  5 | OPA = 229 | OPB =   2
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		5		|		5
+# inp_valid	|		11		|		11
+# opa		|		229		|		229
+# opb		|		2		|		2 
+# cin		|		1		|		1
+# res		|		228		|		228
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          15 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 2185: uvm_test_top.env.agnt.mon [mon] @ : 2185 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 2185: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  7 | OPA =  93 | OPB =  19 | RES =  20 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 2205: uvm_test_top.env.agnt.drv [drv] @ : 2205 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 2205: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  7 | OPA =  93 | OPB =  19
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		7		|		7
+# inp_valid	|		11		|		11
+# opa		|		93		|		93
+# opb		|		19		|		19 
+# cin		|		0		|		0
+# res		|		20		|		18
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Failed =          13 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 2265: uvm_test_top.env.agnt.mon [mon] @ : 2265 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 2265: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  1 | OPA = 108 | OPB =  50 | RES =  58 | ERR = z | OFLOW = 0 | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(43) @ 2285: uvm_test_top.env.agnt.drv [drv] @ : 2285 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 2285: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  1 | OPA = 108 | OPB =  50
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		1		|		1
+# inp_valid	|		11		|		11
+# opa		|		108		|		108
+# opb		|		50		|		50 
+# cin		|		0		|		0
+# res		|		58		|		58
+# err		|		z		|		z
+# oflow		|		0		|		0
+# cout		|		z		|		z
+# g		|		z		|		z
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          16 --------------------------------------------
+# UVM_INFO monitor.sv(50) @ 2345: uvm_test_top.env.agnt.mon [mon] @ : 2345 Arithmetic : 
+# UVM_INFO monitor.sv(51) @ 2345: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  8 | OPA =  96 | OPB =  35 | RES =   z | ERR = z | OFLOW = z | COUT = z | GLE = 1zz
+# UVM_INFO driver.sv(43) @ 2365: uvm_test_top.env.agnt.drv [drv] @ : 2365 Arithmetic : 
+# UVM_INFO driver.sv(44) @ 2365: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 11 | CMD =  8 | OPA =  96 | OPB =  35
+# Field		|	Monitor Output		|	Reference Output
+# --------------|-------------------------------|-----------------------------
+# rst		|		0		|		0
+# ce		|		1		|		1
+# mode		|		1		|		1
+# cmd		|		8		|		8
+# inp_valid	|		11		|		11
+# opa		|		96		|		96
+# opb		|		35		|		35 
+# cin		|		0		|		0
+# res		|		z		|		z
+# err		|		z		|		z
+# oflow		|		z		|		z
+# cout		|		z		|		z
+# g		|		1		|		1
+# l		|		z		|		z
+# e		|		z		|		z
+# ------------------------------------------------ Passed =          17 --------------------------------------------
+# UVM_INFO monitor.sv(54) @ 2425: uvm_test_top.env.agnt.mon [mon] @ : 2425 Logical : 
+# UVM_INFO monitor.sv(55) @ 2425: uvm_test_top.env.agnt.mon [mon] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 00 | CMD = 13 | OPA = 01000011 | OPB = 10101001 | RES =  96 | ERR = z | OFLOW = z | COUT = z | GLE = zzz
+# UVM_INFO driver.sv(47) @ 2445: uvm_test_top.env.agnt.drv [drv] @ : 2445 Logical : 
+# UVM_INFO driver.sv(48) @ 2445: uvm_test_top.env.agnt.drv [drv] RST = 0 | CE = 1 |  CIN = 0 | INPVALID = 00 | CMD = 13 | OPA =  67 | OPB = 169
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 2445: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  128
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [drv]    62
+# [mon]    62
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 2445 ns  Iteration: 67  Instance: /top
+# End time: 14:24:02 on Aug 20,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 23

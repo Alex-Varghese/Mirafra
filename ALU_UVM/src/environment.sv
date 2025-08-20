@@ -1,9 +1,7 @@
-`include "agent.sv"
-`include "scoreboard.sv"
 
 class environment extends uvm_env;
   
-  alu_coverage subscriber;
+  // alu_coverage subscriber;
   agent agnt;
   scoreboard scb;
   
@@ -17,16 +15,17 @@ class environment extends uvm_env;
     super.build_phase(phase);
     agnt = agent::type_id::create("agnt",this);
     scb = scoreboard::type_id::create("scb",this);
-	subscriber = alu_coverage::type_id::create("subscriber", this);
+    //subscriber = alu_coverage::type_id::create("subscriber", this);
   endfunction: build_phase
   
   function void connect_phase(uvm_phase phase);
   	super.connect_phase(phase);
-	agnt.mon.item_collected_port.connect(scb.item_collected_export);
-	agnt.drv.item_collected_port.connect(subscr.aport_drv);	
-	agnt.mon.item_collected_port.connect(subscr.aport_mon);	
+		agnt.mon.item_collected_port.connect(scb.monitor_imp);
+		agnt.drv.item_collected_port.connect(scb.driver_imp);
+	//agnt.drv.item_collected_port.connect(subscr.aport_drv);	
+	//agnt.mon.item_collected_port.connect(subscr.aport_mon);	
   endfunction : connect_phase
     
- endclass : env
+endclass : environment;
     
     

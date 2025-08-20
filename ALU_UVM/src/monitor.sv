@@ -17,7 +17,7 @@ class monitor extends uvm_monitor;
 
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    if(!uvm_config_db#(virtual alu_interface)::get(this, "", "vif", vif))
+    if(!uvm_config_db#(virtual alu_intf)::get(this, "", "vif", vif))
     
        `uvm_fatal("NOVIF",{"virtual interface must be set for: ",get_full_name(),".vif"});
   endfunction
@@ -25,8 +25,8 @@ class monitor extends uvm_monitor;
   virtual task run_phase(uvm_phase phase);
   	super.run_phase(phase);
     forever begin
-      repeat(2) @(vif.mon_cb);  
-	  repeat(3) @(vif.mon_cb)
+    //repeat(2) @(vif.mon_cb);  
+		repeat(5) @(vif.mon_cb);
 	  if(vif.mon_cb.MODE && vif.mon_cb.CMD == 9) 
 	  	repeat(1)@(vif.mon_cb);
 	  begin
@@ -46,8 +46,20 @@ class monitor extends uvm_monitor;
 		seq.RST = vif.mon_cb.RST;
 		seq.CIN = vif.mon_cb.CIN;
 	 end
-   item_collected_port.write(seq);
-   seq.print();
+   if(vif.mon_cb.MODE) begin      
+	`uvm_info(get_name(),$sformatf("@ : %0t Arithmetic : ",$time),UVM_MEDIUM);
+	`uvm_info(get_name(),$sformatf("RST = %b | CE = %b |  CIN = %b | INPVALID = %b | CMD = %d | OPA = %d | OPB = %d | RES = %d | ERR = %b | OFLOW = %b | COUT = %b | GLE = %b%b%b",seq.RST,seq.CE,seq.CIN,seq.INP_VALID,seq.CMD,seq.OPA,seq.OPB,seq.RES,seq.ERR,seq.OFLOW,seq.COUT,seq.G,seq.L,seq.E),UVM_MEDIUM);
+    end
+    else begin
+	`uvm_info(get_name(),$sformatf("@ : %0t Logical : ",$time),UVM_MEDIUM);
+	    `uvm_info(get_name(),$sformatf("RST = %b | CE = %b |  CIN = %b | INPVALID = %b | CMD = %d | OPA = %b | OPB = %b | RES = %d | ERR = %b | OFLOW = %b | COUT = %b | GLE = %b%b%b",seq.RST,seq.CE,seq.CIN,seq.INP_VALID,seq.CMD,seq.OPA,seq.OPB,seq.RES,seq.ERR,seq.OFLOW,seq.COUT,seq.G,seq.L,seq.E),UVM_MEDIUM);
+   end
+	 if((vif.mon_cb.MODE) && (vif.mon_cb.CMD == 9 || vif.mon_cb.CMD == 10))
+	 		repeat(2)@(vif.mon_cb);		
+	 else			
+		  repeat(3)@(vif.mon_cb);
+	 item_collected_port.write(seq);
+
    end
   endtask
   

@@ -1,8 +1,10 @@
 `include "uvm_macros.svh"
 `include "interface.sv"
-`include "test.sv"
+`include "alu.v"
+
 import uvm_pkg::*;    
- 
+import alu_pkg::*;
+
 module top;
   bit clk = 0;
   
@@ -11,9 +13,9 @@ module top;
   initial begin
     repeat(3)@(posedge clk);
   end
-  alu_intf vif(clk,RST);
+  alu_intf vif(clk);
   
-  alu_design DUT(
+  alu DUT(
     .CLK(vif.clk),
     .RST(vif.RST),
     .CE(vif.CE),

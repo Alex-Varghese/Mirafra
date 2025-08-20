@@ -10,13 +10,13 @@ interface alu_intf(input logic clk);
   logic [(`WIDTH - 1) : 0]OPA,OPB;
   logic CIN;
   logic ERR;
-  logic [`WIDTH : 0] RES;
+  logic [`WIDTH + 1: 0] RES;
   logic OFLOW,COUT;
   logic G,L,E;
 
   clocking driver_cb @(posedge clk);
     default input #0 output #0;
-    input RST;	  
+    output RST;	  
     output INP_VALID;
     output MODE;
     output CMD;
@@ -26,7 +26,7 @@ interface alu_intf(input logic clk);
     output CIN;
   endclocking
 
-  clocking monitor_cb @(posedge clk);
+  clocking mon_cb @(posedge clk);
     default input #0 output #0;
     input ERR;
     input RES;
@@ -56,7 +56,7 @@ interface alu_intf(input logic clk);
   endclocking
 
   modport driver_modport (clocking driver_cb);
-  modport monitor_modport (clocking monitor_cb);
+  modport monitor_modport (clocking mon_cb);
   modport reference_modport (clocking reference_cb);
 
 endinterface

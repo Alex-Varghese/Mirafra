@@ -6,10 +6,10 @@ class alu_coverage extends uvm_component;
 
 	`uvm_component_utils(alu_coverage)
 	  
-	uvm_analysis_imp_mon_cg #(mem_sequence_item, mem_coverage) aport_mon1;
-	uvm_analysis_imp_drv_cg #(mem_sequence_item, mem_coverage) aport_drv1;
+	uvm_analysis_imp_mon_cg #(sequence_item, alu_coverage) aport_mon1;
+	uvm_analysis_imp_drv_cg #(sequence_item, alu_coverage) aport_drv1;
 
-	sequence_item , txn_drv1;
+	sequence_item txn_drv1;
 	real mon1_cov,drv1_cov;
 
 	covergroup driver_cov;
@@ -53,12 +53,12 @@ class alu_coverage extends uvm_component;
 	    bins ROR = {13};
 	  }
 	  OPA_CP : coverpoint txn_drv1.OPA {
-	    bins OPA_VAL = {[0:2**WIDTH-1]};
+	    bins OPA_VAL = {[0:2**`WIDTH-1]};
 	  }
 	  OPB_CP : coverpoint txn_drv1.OPB {
 	    bins OPB_VAL = {[0:2**`WIDTH-1]};
 	  }
-	  CMD_ARITHMETIC_CPxINPVALID_CP : cross CMD_ARITHMETIC_CP,INPVALID_CP
+		CMD_ARITHMETIC_CPxINPVALID_CP : cross CMD_ARITHMETIC_CP,INPVALID_CP;
 	  CMD_LOGICAL_CPxINPVALID_CP : cross CMD_LOGICAL_CP,INPVALID_CP;
 	endgroup : driver_cov
 

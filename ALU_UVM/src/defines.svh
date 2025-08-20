@@ -1,10 +1,9 @@
 `ifndef DEFINES_SV  
 `define DEFINES_SV  
 
-`define no_trans 100
+`define no_trans 1 
 `define WIDTH 8
-`define CMD_WIDTH 3
-
+`define CMD_WIDTH 4
 `define SHIFT $clog2(`WIDTH)
 `define ADD	0
 `define SUB	1
