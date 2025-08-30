@@ -1,9 +1,0 @@
-QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 14:21:39 on Aug 20,2025
-vlog -sv "+acc" "+cover" "+fcover" -l alu.log top.sv 
-** Note: (vlog-2286) top.sv(1): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
--- Compiling interface alu_intf
--- Compiling module alu
-** Error: top.sv(6): (vlog-13006) Could not find the package (alu_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-End time: 14:21:39 on Aug 20,2025, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
